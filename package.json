@@ -1,0 +1,20 @@
+{
+  "name": "tutorial-grpc",
+  "version": "1.0.0",
+  "description": "Tutorial gRPC utilizando Node",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArturoCordoba/Tutorial-gRPC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArturoCordoba/Tutorial-gRPC/issues"
+  },
+  "homepage": "https://github.com/ArturoCordoba/Tutorial-gRPC#readme"
+}
