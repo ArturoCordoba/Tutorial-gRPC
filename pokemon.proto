@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+service PokemonService {
+    rpc GetAll (Empty) returns (PokemonList) {}
+    rpc Get (PokemonRequestName) returns (Pokemon) {}
+}
+
+message Empty {}
+
+message Pokemon {
+    string name = 1;
+    string url = 2;
+}
+
+message PokemonList {
+    repeated Pokemon customer = 1;
+}
+
+message PokemonRequestName {
+    string name = 1;
+}
