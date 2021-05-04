@@ -1,7 +1,6 @@
 // Cargar la lista de pokemones
 const fs = require('fs');
-const pokemons = fs.readFileSync('./pokemon.json', 'utf8');
-
+const pokemons = JSON.parse(fs.readFileSync('./pokemon.json', 'utf8'));
 
 
 // Inicializar servidor gRPC

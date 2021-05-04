@@ -13,7 +13,7 @@ message Pokemon {
 }
 
 message PokemonList {
-    repeated Pokemon customer = 1;
+    repeated Pokemon pokemons = 1;
 }
 
 message PokemonRequestName {
