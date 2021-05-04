@@ -2,13 +2,14 @@
 const fs = require('fs');
 const pokemons = JSON.parse(fs.readFileSync('./pokemon.json', 'utf8'));
 
-
-// Inicializar servidor gRPC
+// Ruta del contrato
 const PROTO_PATH = "./pokemon.proto";
 
+// Importar bibliotecas
 const grpc = require("grpc");
 const protoLoader = require("@grpc/proto-loader");
 
+// Cargar contrato de servicio
 var packageDefinition = protoLoader.loadSync(PROTO_PATH, {
     keepCase: true,
     longs: String,
@@ -16,8 +17,10 @@ var packageDefinition = protoLoader.loadSync(PROTO_PATH, {
     arrays: true
 });
 
+// Registrar contrato en gRPC
 var pokemonProto = grpc.loadPackageDefinition(packageDefinition);
 
+// Crear servidor
 const server = new grpc.Server();
 
 
